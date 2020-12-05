@@ -13,8 +13,9 @@ Teniendo en cuenta que es la primera vez que se realiza algo de este tipo en la 
 
 ### Link de interés:
 
-[Codecks.io](https://gamerev.codecks.io)
-[Discord](https://discord.gg/KrtbfaQ)
+- [Repositorio en GitHub](https://github.com/gamerevar/proyecto-comunitario-1-unity)
+- [Deck de Codecks](https://open.codecks.io/proyecto-comunitario-1-unity)
+- [Discord de la comunidad](https://discord.gg/KrtbfaQ)
 
 mail de contacto: <contacto@gamerev.com.ar>
 
