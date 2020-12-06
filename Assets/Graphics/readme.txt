@@ -1,0 +1,1 @@
+Ubicar aca todos los assets graficos. Podés subdividir este directorio en las partes que sean necesarias.

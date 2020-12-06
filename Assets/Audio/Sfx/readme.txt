@@ -1,0 +1,1 @@
+Ubica en esta carpeta todos los sonidos creados para el juego. Podés subdividir este directorio en las partes que sean necesearias.
