@@ -37,7 +37,7 @@ mail de contacto: <contacto@gamerev.com.ar>
 ### Detalles del proyecto:
 
 * Nombre del proyecto: proyecto-comunitario-1-unity
-* Version del engine: 
+* Version del engine: Unity 2019.4.9f1
 * Licencia: MIT
 
 ## Requisitos para participar:
