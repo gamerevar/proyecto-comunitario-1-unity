@@ -1,0 +1,7 @@
+* @gamerevar
+
+packages/* @gamerev
+projectsettings/* @gamerev
+assets/* @gamerev
+assets/audio* @gamerev
+assets/graphics* @gamerev
