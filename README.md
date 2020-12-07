@@ -24,8 +24,8 @@ mail de contacto: <contacto@gamerev.com.ar>
 * Project managers: Paul & Federico Iribarren 
 * Unity: Svartskogen
 * Arte: ignacio_otu
-* Audio: ????
-* Game design: ????
+* Audio: oqlqo_bk
+* Game design: Demonioazul
 
 ### Detalles del proyecto:
 
