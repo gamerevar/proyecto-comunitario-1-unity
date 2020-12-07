@@ -21,18 +21,11 @@ mail de contacto: <contacto@gamerev.com.ar>
 
 ### Responsables por departamento:
 
-* Admins: Paul & Federico Iribarren 
+* Project managers: Paul & Federico Iribarren 
 * Unity: Svartskogen
-* Arte: ????
+* Arte: ignacio_otu
 * Audio: ????
 * Game design: ????
-
-### Miembros por departamento:
-
-* Programación:
-* Arte:
-* Audio:
-* Game design:
 
 ### Detalles del proyecto:
 
