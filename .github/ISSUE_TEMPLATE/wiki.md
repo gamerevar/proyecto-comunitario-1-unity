@@ -3,7 +3,7 @@ name: Wiki
 about: Agregar una página o cambio a la wiki
 title: Título [WIKI]
 labels: wiki
-assignees: ''
+assignees: gamerevar
 
 ---
 
