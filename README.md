@@ -43,4 +43,4 @@ mail de contacto: <contacto@gamerev.com.ar>
 1. **Respetar a los lead y admins**. Cada uno está asignado para supervisar su área y tiene la última palabra sobre cada aspecto de ella.
 3. **Comprometerse con las tareas y deadlines**. En caso de no poder cumplir un objetivo podés desasignartelo o pedir ayuda.
 
-## Continuá leyendo la [Wiki](https://github.com/gamerevar/proyecto-comunitario-1-gd/wiki) para saber más.
+## Continuá leyendo la [Wiki](https://github.com/gamerevar/proyecto-comunitario-1-unity/wiki) para saber más.
