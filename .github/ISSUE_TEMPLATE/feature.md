@@ -2,7 +2,7 @@
 name: Feature
 about: Agregar un feature al juego
 title: Título [FEATURE]
-labels: enhancement
+labels: feature
 assignees: ''
 
 ---
