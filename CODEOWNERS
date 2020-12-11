@@ -1,7 +1,7 @@
 * @gamerevar
 
-packages/* @gamerev
-projectsettings/* @gamerev
-assets/* @gamerev
-assets/audio* @gamerev
-assets/graphics* @gamerev
+packages/* @Svartskogen
+projectsettings/* @Svartskogen
+assets/* @Svartskogen
+assets/audio/* @lucasmdla
+assets/graphics/* @gamerev
