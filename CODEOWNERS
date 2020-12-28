@@ -1,7 +1,16 @@
-* @gamerevar
+* @gamerevar @Svartskogen
 
-Packages/* @Svartskogen
-ProjectSettings/* @Svartskogen
-Assets/* @Svartskogen
-Assets/Audio/* @lucasmdla
-Assets/Graphics/* @Swimmablebee912
+#/Packages/ @Svartskogen
+#/ProjectSettings/ @Svartskogen
+#/Assets/ @Svartskogen
+#/Assets/Audio/ @lucasmdla
+#/Assets/Graphics/ @Swimmablebee912
+
+*.mp3 @lucasmdla
+*.wav @lucasmdla
+*.ogg @lucasmdla
+
+*.png @Swimmablebee912
+*.jpeg @Swimmablebee912
+*.jpg @Swimmablebee912
+*.bmp @Swimmablebee912
