@@ -22,6 +22,7 @@ mail de contacto: <contacto@gamerev.com.ar>
 ### Responsables por departamento:
 
 * Project managers: Paul & Federico Iribarren 
+* Codecks: Paul & Azagaya
 * Unity: Svartskogen
 * Arte: ignacio_otu
 * Audio: oqlqo_bk
