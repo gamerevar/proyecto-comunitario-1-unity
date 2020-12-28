@@ -1,7 +1,7 @@
 * @gamerevar
 
-packages/* @Svartskogen
-projectsettings/* @Svartskogen
-assets/* @Svartskogen
-assets/audio/* @lucasmdla
-assets/graphics/* @Swimmablebee912
+Packages/* @Svartskogen
+ProjectSettings/* @Svartskogen
+Assets/* @Svartskogen
+Assets/Audio/* @lucasmdla
+Assets/Graphics/* @Swimmablebee912
