@@ -14,6 +14,7 @@ Teniendo en cuenta que es la primera vez que se realiza algo de este tipo en la 
 ### Link de interés:
 
 - [Deck de Codecks](https://open.codecks.io/proyecto-comunitario-1-unity)
+- [Repositorio de Gdrive](https://drive.google.com/drive/folders/1ia6nAGJ1ceT7ZJzAwzJVXEUT0EDOV67t?usp=sharing)
 - [Discord de la comunidad](https://discord.gg/KrtbfaQ)
 - [Miembros del proyecto](https://docs.google.com/spreadsheets/d/1DhZhN6iZDDRddVoGphDYP_qhdfA52QU_fwbsFlc0snk/edit?usp=sharing)
 
