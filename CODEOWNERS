@@ -1,5 +1,7 @@
 * @gamerevar @Svartskogen
 
+CODEOWNERS @gamerevar
+
 #/Packages/ @Svartskogen
 #/ProjectSettings/ @Svartskogen
 #/Assets/ @Svartskogen
