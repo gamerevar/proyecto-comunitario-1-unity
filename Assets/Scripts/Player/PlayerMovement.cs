@@ -4,35 +4,24 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-
+    [SerializeField]
     private float speed;
     private float moveInAxisX;
     private float moveInAxisY;
     private Rigidbody2D rBody;
 
-    // Start is called before the first frame update
     void Start()
     {
-        speed = 100.0f;
+        speed = 10.0f;
         rBody = gameObject.GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
-    {
-        
-    }
-
-    private void FixedUpdate()
     {
         moveInAxisX = Input.GetAxis("Vertical");
         moveInAxisY = Input.GetAxis("Horizontal");
 
-        moveInAxisX *= Time.deltaTime;
-        moveInAxisY *= Time.deltaTime;
-
-        Vector2 speedVector = new Vector2(moveInAxisY, moveInAxisX);
-        rBody.velocity = speedVector * speed;
-
+       Vector2 speedVector = new Vector2(moveInAxisY, moveInAxisX);
+       rBody.velocity = speedVector.normalized * speed;
     }
 }
