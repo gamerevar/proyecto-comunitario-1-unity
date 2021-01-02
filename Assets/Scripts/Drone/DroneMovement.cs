@@ -6,8 +6,9 @@ public class DroneMovement : MonoBehaviour
 {
     private Transform player;
     private Rigidbody2D rBody;
-    private float distanceInX;
-    private float distanceInY;
+    private float dirInX;
+    private float dirInY;
+    private float distanceToPlayer;
     [SerializeField] private float speed;
     [SerializeField] private float distance;
 
@@ -19,30 +20,29 @@ public class DroneMovement : MonoBehaviour
     
     void Update()
     {
-        distanceInX = player.position.x - transform.position.x;
-        distanceInY = player.position.y - transform.position.y;
+        dirInX = player.position.x - transform.position.x;
+        dirInY = player.position.y - transform.position.y;
 
-        distanceInX *= Time.fixedDeltaTime;
-        distanceInY *= Time.fixedDeltaTime;
+        dirInX *= Time.fixedDeltaTime;
+        dirInY *= Time.fixedDeltaTime;
 
-        Vector2 dir = new Vector2(distanceInX, distanceInY);
+        Vector2 dir = new Vector2(dirInX, dirInY);
 
-        if (Vector2.Distance(transform.position, player.position) < distance + 0.05f && Vector2.Distance(transform.position, player.position) > distance)
+        distanceToPlayer = Vector2.Distance(transform.position, player.position);
+
+        if (distanceToPlayer < distance + 0.05f && distanceToPlayer > distance)
         {
             rBody.velocity = Vector2.zero;
         }
         else
         {
-            if (Vector2.Distance(transform.position, player.position) > distance)
+            if (distanceToPlayer > distance)
             {
                 rBody.velocity = dir * speed;
             }
             else
             {
-                if (Vector2.Distance(transform.position, player.position) < distance)
-                {
                     rBody.velocity = dir * -speed;
-                }
             }
         }
     }
