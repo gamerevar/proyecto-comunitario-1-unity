@@ -1,10 +1,11 @@
-* @gamerevar @Svartskogen
-
 CODEOWNERS @gamerevar
+
+* @Svartskogen
 
 #/Packages/ @Svartskogen
 #/ProjectSettings/ @Svartskogen
 #/Assets/ @Svartskogen
+
 #/Assets/Audio/ @lucasmdla
 #/Assets/Graphics/ @Swimmablebee912
 
