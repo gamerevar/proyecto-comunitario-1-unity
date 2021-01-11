@@ -12,16 +12,15 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
-        speed = 10.0f;
         rBody = gameObject.GetComponent<Rigidbody2D>();
     }
 
     void Update()
     {
-        moveInAxisX = Input.GetAxis("Vertical");
-        moveInAxisY = Input.GetAxis("Horizontal");
+       moveInAxisX = Input.GetAxisRaw("Vertical");
+       moveInAxisY = Input.GetAxisRaw("Horizontal");
 
-       Vector2 speedVector = new Vector2(moveInAxisY, moveInAxisX);
-       rBody.velocity = speedVector.normalized * speed;
+       Vector2 directionVector = new Vector2(moveInAxisY, moveInAxisX);
+       rBody.velocity = directionVector.normalized * speed;
     }
 }
