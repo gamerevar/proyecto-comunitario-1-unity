@@ -9,26 +9,28 @@ public class DroneMovement : MonoBehaviour
     private float dirInX;
     private float dirInY;
     private float distanceToPlayer;
-    [SerializeField] private float speed;
-    [SerializeField] private float distance;
+    [Tooltip("Drone movement speed.")]
+    [SerializeField] private float speed = 10;
+    [Tooltip("Maximun distance before the Drone starts moving.")]
+    [SerializeField] private float distance = 1;
+    [Tooltip("Offset added to the player position.")]
+    [SerializeField] private Vector3 offset = Vector3.zero;
 
     void Start()
     {
         player = GameObject.FindWithTag("Player").GetComponent<Transform>();
         rBody = GetComponent<Rigidbody2D>();
+        offset.z = 0; //Un z = 0 puede causar problemas en un juego 2D.
     }
     
     void Update()
     {
-        dirInX = player.position.x - transform.position.x;
-        dirInY = player.position.y - transform.position.y;
+        dirInX = player.position.x + offset.x - transform.position.x;
+        dirInY = player.position.y + offset.y - transform.position.y;
 
-        dirInX *= Time.fixedDeltaTime;
-        dirInY *= Time.fixedDeltaTime;
+        Vector2 dir = new Vector2(dirInX, dirInY) * Time.fixedDeltaTime;
 
-        Vector2 dir = new Vector2(dirInX, dirInY);
-
-        distanceToPlayer = Vector2.Distance(transform.position, player.position);
+        distanceToPlayer = Vector2.Distance(transform.position, player.position + offset);
 
         if (distanceToPlayer < distance + 0.05f && distanceToPlayer > distance)
         {
@@ -42,7 +44,7 @@ public class DroneMovement : MonoBehaviour
             }
             else
             {
-                    rBody.velocity = dir * -speed;
+                rBody.velocity = dir * -speed;
             }
         }
     }
