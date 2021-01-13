@@ -3,12 +3,12 @@ name: Tarea
 about: Sugerí una tarea nueva para un área determinada. No olvides utilizar la label
   correcta!
 title: Nueva tarea [Tarea]
-labels: ''
+labels: pendiente-codecks
 assignees: ''
 
 ---
 
-# Título
+# Descripción de la tarea
 
 Texto
 
