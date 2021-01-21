@@ -4,13 +4,9 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField]
     private int maxHealth;
-    [SerializeField]
     private float movementSpeed;
-    [SerializeField]
     private float attackRange;
-    [SerializeField]
     private float aggroRange;
 
     public enum State { Idle, Moving, Attacking };
@@ -27,6 +23,7 @@ public class Enemy : MonoBehaviour
     {
         health = maxHealth;
         alive = true;
+        LoadScriptableObjectData();
     }
 
     private void Start()
@@ -34,6 +31,11 @@ public class Enemy : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
         state = State.Idle;
         waypoint = transform.position;
+    }
+
+    private void LoadScriptableObjectData()
+    {
+        //TODO
     }
 
     private void Kill()
