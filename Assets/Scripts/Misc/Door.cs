@@ -10,6 +10,11 @@ public class Door : MonoBehaviour
 
     private void Start()
     {
+        if(door == null)
+        {
+            Debug.LogError("No se asigno la puerta correspondiente en door");
+            return;
+        }
         door.GetComponent<SpriteRenderer>().sprite = doorCloseSprite;
     }
 
@@ -18,6 +23,6 @@ public class Door : MonoBehaviour
         if (collision.tag != "Player") return;
 
         door.GetComponent<SpriteRenderer>().sprite = doorOpenSprite;
-        door.GetComponent<BoxCollider2D>().enabled = false;
+        door.GetComponent<Collider2D>().enabled = false;
     }
 }
