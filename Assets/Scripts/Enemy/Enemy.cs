@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    [SerializeField]
+    private EnemyData data;
+
     private int maxHealth;
     private float movementSpeed;
     private float attackRange;
@@ -21,9 +24,9 @@ public class Enemy : MonoBehaviour
 
     private void Awake()
     {
+        LoadScriptableObjectData();
         health = maxHealth;
         alive = true;
-        LoadScriptableObjectData();
     }
 
     private void Start()
@@ -33,9 +36,46 @@ public class Enemy : MonoBehaviour
         waypoint = transform.position;
     }
 
+    private void Update()
+    {
+        float playerDistance = Vector3.Distance(player.position, transform.position);
+
+        switch (state)
+        {
+            case State.Idle:
+                if (playerDistance <= aggroRange)
+                    state = State.Moving;
+
+                break;
+            case State.Moving:
+                transform.position = Vector3.MoveTowards(transform.position, player.position, movementSpeed * Time.deltaTime);
+
+                if (playerDistance <= attackRange)
+                    Attack();
+                else if (playerDistance > aggroRange)
+                    state = State.Idle;
+
+                break;
+            case State.Attacking:
+                // TODO: Integrar con EnemyAttack
+                break;
+        }
+    }
+
+    private void Attack()
+    {
+        state = State.Attacking;
+
+        // TODO: Integrar con EnemyAttack
+        Debug.Log("Attacking");
+    }
+
     private void LoadScriptableObjectData()
     {
-        //TODO
+        maxHealth = data.maxHealth;
+        movementSpeed = data.movementSpeed;
+        attackRange = data.attackRange;
+        aggroRange = data.aggroRange;
     }
 
     private void Kill()
