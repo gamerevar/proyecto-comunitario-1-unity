@@ -18,7 +18,6 @@ public class Enemy : MonoBehaviour
     private bool alive;
     
     private Transform player;
-    private Vector2 waypoint;
     private State state;
 
 
@@ -33,11 +32,13 @@ public class Enemy : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         state = State.Idle;
-        waypoint = transform.position;
     }
 
     private void Update()
     {
+        if (!alive)
+            return;
+
         float playerDistance = Vector3.Distance(player.position, transform.position);
 
         switch (state)
@@ -48,7 +49,7 @@ public class Enemy : MonoBehaviour
 
                 break;
             case State.Moving:
-                transform.position = Vector3.MoveTowards(transform.position, player.position, movementSpeed * Time.deltaTime);
+                MoveTowardsPlayer();
 
                 if (playerDistance <= attackRange)
                     Attack();
@@ -83,9 +84,9 @@ public class Enemy : MonoBehaviour
         alive = false;
     }
 
-    private void MoveTowardsWaypoint()
+    private void MoveTowardsPlayer()
     {
-        transform.Translate(waypoint.normalized * movementSpeed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, player.position, movementSpeed * Time.deltaTime);
     }
 
     public void Damage(int amount)
