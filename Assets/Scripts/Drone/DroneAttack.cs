@@ -45,7 +45,7 @@ public class DroneAttack : MonoBehaviour
         {
             if (crystalAttackCounter >= crystalAttackRate)
             {
-                Instantiate(crystalPrefab, transform.position, transform.rotation);
+                Instantiate(crystalPrefab, shootPivot.position, shootPivot.rotation);
                 crystalAttackCounter = 0;
             }
         }
