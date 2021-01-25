@@ -8,19 +8,25 @@ public class PlayerMovement : MonoBehaviour
     private float speed;
     private float moveInAxisX;
     private float moveInAxisY;
+
     private Rigidbody2D rBody;
+    private PlayerHealth playerHealth;
 
     void Start()
     {
-        rBody = gameObject.GetComponent<Rigidbody2D>();
+        rBody = GetComponent<Rigidbody2D>();
+        playerHealth = GetComponent<PlayerHealth>();
     }
 
     void Update()
     {
-       moveInAxisX = Input.GetAxisRaw("Vertical");
-       moveInAxisY = Input.GetAxisRaw("Horizontal");
+        if (playerHealth.IsAlive())
+        {
+            moveInAxisX = Input.GetAxisRaw("Vertical");
+            moveInAxisY = Input.GetAxisRaw("Horizontal");
 
-       Vector2 directionVector = new Vector2(moveInAxisY, moveInAxisX);
-       rBody.velocity = directionVector.normalized * speed;
+            Vector2 directionVector = new Vector2(moveInAxisY, moveInAxisX);
+            rBody.velocity = directionVector.normalized * speed;
+        }
     }
 }
