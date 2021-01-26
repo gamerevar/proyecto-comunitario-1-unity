@@ -7,6 +7,6 @@ public class EnemyData : ScriptableObject
 {
     public int maxHealth = 100;
     public float movementSpeed = 5f;
-    public float attackRange = 5f;
     public float aggroRange = 5;
+    public EnemyAttackData attackData; //Por ahora solo existe la posibilidad de un ataque.
 }
