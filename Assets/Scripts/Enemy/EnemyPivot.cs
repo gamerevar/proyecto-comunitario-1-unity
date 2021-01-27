@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Rota el objeto en el que esta asignado para apuntar hacia el jugador.
+/// Se suele usar en un objeto hijo de un Enemigo.
+/// </summary>
 public class EnemyPivot : MonoBehaviour
 {
     private Camera cam;

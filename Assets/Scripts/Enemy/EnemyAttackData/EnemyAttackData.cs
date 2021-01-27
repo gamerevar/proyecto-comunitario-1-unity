@@ -4,12 +4,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// Clase base que derivan los distintos tipos de ataques
+/// Scriptable Object base que derivan los distintos tipos de ataques
 /// <para>
 /// Tipos de ataques propuestos:
 /// Target: una vez entra en rango, fija un objetivo y le hace daño sin importar que pase.
 /// TargetRemainInRange: canaliza el ataque y solo le hace daño si se mantiene en rango.
-/// MeleeArea: castea una zona en la que realiza daño. (instancia objeto)
+/// MeleeArea: castea una zona en la que realiza daño. (Overlap Box)
 /// Proyectile: castea un proyectil en direccion de su objetivo.</para>
 /// </summary>
 public class EnemyAttackData : ScriptableObject

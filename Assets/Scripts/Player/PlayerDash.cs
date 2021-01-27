@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Script encargado de darle la capacidad a un objeto de dashear a la direccion en la que se mueve.
+/// </summary>
 public class PlayerDash : MonoBehaviour
 {
     [SerializeField]

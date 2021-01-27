@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// Clase que maneja proyectiles compuestos por un RigidBody2D y un Collider2D.
+/// Script que maneja proyectiles compuestos por un RigidBody2D y un Collider2D.
 /// Funciona tanto para proyectiles del jugador como del enemigo, para esto la layer del proyectil debe ser o PlayerBullet o EnemyBullet.
 /// </summary>
 public class Projectile : MonoBehaviour

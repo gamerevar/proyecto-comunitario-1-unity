@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Sistema simple de movimiento para el jugador.
+/// </summary>
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField]

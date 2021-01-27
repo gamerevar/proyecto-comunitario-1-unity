@@ -1,5 +1,8 @@
 ﻿using UnityEngine;
 
+/// <summary>
+/// Similar a <see cref="TargetAttack"/> solo que chequea que el jugador no se haya ido mas lejos que <see cref="maximumRange"/>
+/// </summary>
 [CreateAssetMenu(fileName = "New Target Remain In Range Attack Data", menuName = "ScriptableObjects/EnemyAttackData/TargetRemainInRangeAttackData", order = 1)]
 public class TargetRemainInRangeAttack : EnemyAttackData
 {

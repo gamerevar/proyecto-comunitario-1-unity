@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Script encargado de detectar si el jugador se acerca al Trigger del objeto para abrir la puerta asignada en <see cref="door"/>
+/// </summary>
 public class Door : MonoBehaviour
 {
     public GameObject door;

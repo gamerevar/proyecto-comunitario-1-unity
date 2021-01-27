@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Script que controla los estados del enemigo, lo mueve y tambien incluye su sistema de vida.
+/// </summary>
 public class Enemy : MonoBehaviour
 {
     public EnemyData data;

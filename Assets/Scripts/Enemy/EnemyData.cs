@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Scriptable Objecto con la informacion sobre un de enemigo.
+/// </summary>
 [CreateAssetMenu(fileName = "New Enemy", menuName = "ScriptableObjects/EnemyData", order = 1)]
 public class EnemyData : ScriptableObject
 {

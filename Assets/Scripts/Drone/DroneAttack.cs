@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Script encargado de tomar el input y realizar los ataques del Dron.
+/// </summary>
 public class DroneAttack : MonoBehaviour
 {
     public GameObject laserPrefab;

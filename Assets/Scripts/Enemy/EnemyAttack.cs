@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Script que toma un <see cref="EnemyAttackData"/> para realizar los ataques del enemigo.
+/// </summary>
 public class EnemyAttack : MonoBehaviour
 {
     public LayerMask onlyPlayerLayer;

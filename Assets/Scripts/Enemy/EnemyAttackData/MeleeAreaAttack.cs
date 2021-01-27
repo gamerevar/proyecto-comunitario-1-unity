@@ -1,5 +1,8 @@
 ﻿using UnityEngine;
 
+/// <summary>
+/// Chequea si el jugador se encuentra en la zona del tamaño dado por <see cref="attackSize"/>
+/// </summary>
 [CreateAssetMenu(fileName = "New Melee Area Attack Data", menuName = "ScriptableObjects/EnemyAttackData/MeleeAreaAttackData", order = 1)]
 public class MeleeAreaAttack : EnemyAttackData
 {
