@@ -6,13 +6,13 @@ using UnityEngine;
 /// Clase que maneja proyectiles compuestos por un RigidBody2D y un Collider2D.
 /// Funciona tanto para proyectiles del jugador como del enemigo, para esto la layer del proyectil debe ser o PlayerBullet o EnemyBullet.
 /// </summary>
-public class Proyectile : MonoBehaviour
+public class Projectile : MonoBehaviour
 {
     [SerializeField]
-    private int proyectileDamage;
+    private int proyectileDamage = 20;
 
     [SerializeField]
-    private float proyectileVelocity;
+    private float proyectileVelocity = 5f;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

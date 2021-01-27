@@ -15,4 +15,4 @@ MonoBehaviour:
   maxHealth: 100
   movementSpeed: 5
   aggroRange: 15
-  attackData: {fileID: 11400000, guid: 69666e0121d273048ab9f1478e649f3f, type: 2}
+  attackData: {fileID: 11400000, guid: b53833c61bacc5b408293bd57995db70, type: 2}

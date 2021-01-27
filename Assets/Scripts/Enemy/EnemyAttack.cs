@@ -4,14 +4,19 @@ using UnityEngine;
 
 public class EnemyAttack : MonoBehaviour
 {
+    public LayerMask onlyPlayerLayer;
     EnemyAttackData data;
     float cd;            //cooldown counter.
     bool cdReady;        //true when ready to attack.
     bool executeReady;   //true when able to move. (not executing an attack)
     PlayerHealth currentTarget;
+
+    public Transform Pivot { get; private set; }
+
     private void Awake()
     {
         data = GetComponent<Enemy>().data.attackData;
+        Pivot = GetComponentInChildren<EnemyPivot>().transform;
         cd = 0;
         cdReady = true;
         executeReady = true;
@@ -44,9 +49,10 @@ public class EnemyAttack : MonoBehaviour
     {
         cd = Time.time + data.cooldown;
         executeReady = true;
-        DeriveAttackBehaviour(); //Execute the attack
+        data.ExecuteAttack(this, currentTarget); //Execute the attack
+        //DeriveAttackBehaviour(); 
     }
-    void DeriveAttackBehaviour()
+    /*void DeriveAttackBehaviour() //Obsoleto
     {
         switch (data.attackType)
         {
@@ -63,5 +69,5 @@ public class EnemyAttack : MonoBehaviour
                 Debug.LogError("Not implemented yet");
                 break;
         }
-    }
+    }*/
 }

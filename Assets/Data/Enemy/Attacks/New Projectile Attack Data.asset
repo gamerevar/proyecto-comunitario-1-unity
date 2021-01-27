@@ -9,11 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fa1f9e0a5a3ef74b9ff33e6fb4dbd0f, type: 3}
-  m_Name: TestAttack
+  m_Script: {fileID: 11500000, guid: 88f7a8445a55b7f40a0eef760c03ca77, type: 3}
+  m_Name: New Projectile Attack Data
   m_EditorClassIdentifier: 
-  attackType: 0
-  attackRange: 3
+  attackRange: 5
   damage: 10
-  cooldown: 3
+  cooldown: 0.5
   executeTime: 0.2
+  projectile: {fileID: 1950111620069463177, guid: 30e0665d190353944a412eb6309b866d,
+    type: 3}
