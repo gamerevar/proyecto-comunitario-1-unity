@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Script que controla los estados del enemigo, lo mueve y tambien incluye su sistema de vida.
+/// </summary>
 public class Enemy : MonoBehaviour
 {
-    [SerializeField]
-    private EnemyData data;
-
+    public EnemyData data;
+    
     private int maxHealth;
     private float movementSpeed;
     private float attackRange;
@@ -18,8 +20,9 @@ public class Enemy : MonoBehaviour
     private bool alive;
     
     private Transform player;
+    private PlayerHealth playerHealth;
     private State state;
-
+    private EnemyAttack enemyAttack;
 
     private void Awake()
     {
@@ -30,7 +33,9 @@ public class Enemy : MonoBehaviour
 
     private void Start()
     {
+        enemyAttack = GetComponent<EnemyAttack>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        playerHealth = player.GetComponent<PlayerHealth>();
         state = State.Idle;
     }
 
@@ -48,35 +53,49 @@ public class Enemy : MonoBehaviour
                     state = State.Moving;
 
                 break;
-            case State.Moving:
-                MoveTowardsPlayer();
-
+            case State.Moving:                
                 if (playerDistance <= attackRange)
-                    Attack();
+                {
+                    if (enemyAttack.AttackReady())
+                    {
+                        Attack();
+                    }
+                    else
+                    {
+                        break; //Para que el enemigo no empuje al jugador
+                    }
+                }                   
                 else if (playerDistance > aggroRange)
+                {
                     state = State.Idle;
-
+                }
+                else
+                {
+                    MoveTowardsPlayer();
+                }                  
                 break;
             case State.Attacking:
-                // TODO: Integrar con EnemyAttack
+                if (!enemyAttack.MovementRestrained())
+                {
+                    state = State.Idle;
+                }
                 break;
         }
     }
 
     private void Attack()
     {
+        enemyAttack.Attack(playerHealth);
         state = State.Attacking;
-
-        // TODO: Integrar con EnemyAttack
-        Debug.Log("Attacking");
     }
 
     private void LoadScriptableObjectData()
     {
         maxHealth = data.maxHealth;
         movementSpeed = data.movementSpeed;
-        attackRange = data.attackRange;
         aggroRange = data.aggroRange;
+
+        attackRange = data.attackData.attackRange;
     }
 
     private void Kill()

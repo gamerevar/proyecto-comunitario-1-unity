@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Script encargado de rotar un pivote hacia la posicion del mouse.
+/// </summary>
 public class RotateTowardsMouse : MonoBehaviour
 {
     private Camera cam;
@@ -10,7 +13,7 @@ public class RotateTowardsMouse : MonoBehaviour
     
     void Start()
     {
-        cam = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
+        cam = Camera.main;
     }
 
     void Update()

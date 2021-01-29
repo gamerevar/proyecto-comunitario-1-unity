@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Script encargado de hacer que el Dron siga al jugador
+/// </summary>
 public class DroneMovement : MonoBehaviour
 {
     private Transform player;

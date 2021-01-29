@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Sistema de vida simple para el jugador
+/// </summary>
 public class PlayerHealth : MonoBehaviour
 {
     public int maxHealth;
