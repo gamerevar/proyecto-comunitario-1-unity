@@ -12,7 +12,7 @@ public class MeleeAreaAttack : EnemyAttackData
     {
         //Not working
         Collider2D hits = Physics2D.OverlapBox(caster.Pivot.position,
-            attackSize, caster.Pivot.rotation.eulerAngles.z, caster.onlyPlayerLayer);
+            attackSize, caster.Pivot.rotation.eulerAngles.z, caster.playerLayer);
         if(hits != null)
         {
             hits.GetComponent<PlayerHealth>().Damage(damage);
