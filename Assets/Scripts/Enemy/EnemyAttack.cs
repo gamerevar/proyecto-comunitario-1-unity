@@ -7,7 +7,7 @@ using UnityEngine;
 /// </summary>
 public class EnemyAttack : MonoBehaviour
 {
-    public LayerMask onlyPlayerLayer;
+    public LayerMask playerLayer; //En el inspector, setear una layermask solo con Player. (la capa OnlyPlayer NO, solo marcar Player)
     EnemyAttackData data;
     float cd;            //cooldown counter.
     bool cdReady;        //true when ready to attack.
